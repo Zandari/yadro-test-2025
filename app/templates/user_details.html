@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>Details of user#{{ user.id }}</h1>
+{% endblock %}
+{% block content %}
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow mb-4">
+
+                <div class="card-body">
+                    <div class="row mb-4">
+                        <div class="col-md-4 text-center">
+                            <img src="{{ user.picture.large }}" alt="profile picture" class="img-fluid mb-3">
+                        </div>
+                        <div class="col-md-8">
+                            <h3 class="mb-3">
+                                {{ user.name.title }} {{ user.name.first }} {{ user.name.last }}
+                            </h3>
+                            <p class="lead">Sex: {{ user.gender }}</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">Contacts</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <p class="mb-1"><strong>Email:</strong></p>
+                                    <p>{{ user.email }}</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="mb-1"><strong>Phone number:</strong></p>
+                                    <p>{{ user.phone }}</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="mb-1"><strong>Cell-phone:</strong></p>
+                                    <p>{{ user.cell }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">Address</div>
+                        <div class="card-body">
+                            <p>{{ user.location.street_number }} {{ user.location.street_name }}</p>
+                            <p>{{ user.location.city }}, {{ user.location.state }}</p>
+                            <p>{{ user.location.country }} {{ user.location.postcode }}</p>
+
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <p class="mb-1"><strong>Coordinates:</strong></p>
+                                    <p>Latitude: {{ user.location.coordinates.latitude }}</p>
+                                    <p>Longitude: {{ user.location.coordinates.longitude }}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="mb-1"><strong>Timezone:</strong></p>
+                                    <p>Offset: {{ user.location.timezone.offset }}</p>
+                                    <p>Description: {{ user.location.timezone.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">Dates</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="mb-1"><strong>Date of birth:</strong></p>
+                                    <p>{{ user.dob.date.strftime('%d.%m.%Y') }} ({{ user.dob.age }} лет)</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="mb-1"><strong>Registration date:</strong></p>
+                                    <p>{{ user.registered.date.strftime('%d.%m.%Y') }} ({{ user.registered.age }} лет)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">Login information</div>
+                        <div class="card-body">
+                            <p><strong>Login:</strong> {{ user.login.username }}</p>
+                            <p><strong>Password:</strong> {{ user.login.password }}</p>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <p class="mb-1"><strong>UUID:</strong></p>
+                                    <small class="text-muted">{{ user.login.uuid }}</small>
+                                </div>
+                                <div class="col-md-8">
+                                    <p class="mb-1"><strong>Hashes:</strong></p>
+                                    <small class="text-muted d-block">MD5: {{ user.login.md5 }}</small>
+                                    <small class="text-muted d-block">SHA1: {{ user.login.sha1 }}</small>
+                                    <small class="text-muted d-block">SHA256: {{ user.login.sha256 }}</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% if user.id_info %}
+                    <div class="card">
+                        <div class="card-header">Documents</div>
+                        <div class="card-body">
+                            <p><strong>Document type:</strong> {{ user.id_info.name }}</p>
+                            <p><strong>Number:</strong> {{ user.id_info.value }}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

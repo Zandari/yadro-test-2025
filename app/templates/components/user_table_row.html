@@ -1,0 +1,13 @@
+<tr>
+    <th scope="row">{{ user.id }}</th>
+    <td>{{ user.gender }}</td>
+    <td>{{ user.name.first }}</td>
+    <td>{{ user.name.last }}</td>
+    <td>{{ user.phone }}</td>
+    <td>{{ user.email }}</td>
+    <td>{{ user.location.country }}, {{ user.location.city }}</td>
+    <td><img src="{{ user.picture.medium }}"/></td>
+    <td>
+        <a href="{{ url_for('user_pages.user_details', user_id=user.id) }}" class="btn btn-secondary">Details</a>
+    </td>
+</tr>

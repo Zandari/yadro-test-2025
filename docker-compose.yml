@@ -1,0 +1,21 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    depends_on:
+      - database
+    environment:
+      DATABASE_URL: "postgres://testuser:testuser@database:5432/postgres"
+      LOAD_USERS_ON_STARTUP: true
+
+  database:
+    container_name: ur-postgres
+    image: postgres
+    attach: false
+    environment:
+      POSTGRES_USER: testuser
+      POSTGRES_PASSWORD: testuser
+      POSTGRES_DB: postgres
