@@ -1,0 +1,37 @@
+class DetailDataFieldId:
+    USER_ID = "user-id"
+    USER_PICTURE = "user-picture"
+    USER_NAME_TITLE = "user-name-title"
+    USER_NAME_FIRST = "user-name-first"
+    USER_NAME_LAST = "user-name-last"
+    USER_GENDER = "user-gender"
+
+    USER_EMAIL = "user-email"
+    USER_PHONE = "user-phone"
+    USER_CELL = "user-cell"
+
+    USER_STREET_NUMBER = "user-street-number"
+    USER_STREET_NAME = "user-street-name"
+    USER_CITY = "user-city"
+    USER_STATE = "user-state"
+    USER_COUNTRY = "user-country"
+    USER_POSTCODE = "user-postcode"
+    USER_LATITUDE = "user-latitude"
+    USER_LONGITUDE = "user-longitude"
+    USER_TIMEZONE_OFFSET = "user-timezone-offset"
+    USER_TIMEZONE_DESCRIPTION = "user-timezone-description"
+
+    USER_DOB_DATE = "user-dob-date"
+    USER_DOB_AGE = "user-dob-age"
+    USER_REGISTERED_DATE = "user-registered-date"
+    USER_REGISTERED_AGE = "user-registered-age"
+
+    USER_LOGIN_USERNAME = "user-login-username"
+    USER_LOGIN_PASSWORD = "user-login-password"
+    USER_LOGIN_UUID = "user-login-uuid"
+    USER_LOGIN_MD5 = "user-login-md5"
+    USER_LOGIN_SHA1 = "user-login-sha1"
+    USER_LOGIN_SHA256 = "user-login-sha256"
+
+    USER_ID_TYPE = "user-id-type"
+    USER_ID_NUMBER = "user-id-number"

@@ -1,0 +1,21 @@
+<div class="card mb-4">
+    <div class="card-header">Dates</div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="mb-1"><strong>Date of birth:</strong></p>
+                <p>
+                    <span data-field-id="user-dob-date">{{ user.dob.date.strftime('%d.%m.%Y') }}</span>
+                    <span data-field-id="user-dob-age">{{ user.dob.age }}</span> лет
+                </p>
+            </div>
+            <div class="col-md-6">
+                <p class="mb-1"><strong>Registration date:</strong></p>
+                <p>
+                    <span data-field-id="user-registered-date">{{ user.registered.date.strftime('%d.%m.%Y') }}</span>
+                    <span data-field-id="user-registered-age">{{ user.registered.age }}</span> лет
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

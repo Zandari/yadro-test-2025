@@ -1,4 +1,4 @@
-<div class="btn-group align-items-center" role="group">
+<div class="btn-group align-items-center" id="pagination" role="group">
     {% if pagination.current_page > 1 %}
         <a class="btn btn-secondary" href="{{ url_for('user_pages.list_users', page=pagination.current_page-1) }}">Previous</a>
     {% endif %}

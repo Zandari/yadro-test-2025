@@ -2,17 +2,12 @@
 
 {% block header %}
     <h1>{% block title %}User Registry Overview{% endblock %}</h1>
-    <p>Amount of entries - {{total_users}}</p>
+    <p>Amount of entries - <span data-field-id="total-users-amount">{{total_users}}</span></p>
 {% endblock %}
 
 {% block content %}
     <div class="mb-5 col-12 col-md-4 border rounded p-3 mx-auto">
-        <form method="POST">
-            <h4 class="mb-3">Load from API</h4>
-            <label for="usersAmountInput" class="form-label">Amount of users</label>
-            <input type="number" class="form-control mb-4" name="users_amount" id="usersAmountInput"/>
-            <button type="submit" class="btn btn-primary">Perform</button>
-        </form>
+        {% include "components/load_api_form.html" %}
      </div>
 
     <table class="table align-middle">

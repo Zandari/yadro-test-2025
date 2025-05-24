@@ -89,3 +89,7 @@ def create_random_user() -> models.User:
         )
 
         return user
+
+
+def create_random_user_in_bulk(amount: int) -> list[models.User]:
+    return [create_random_user() for _ in range(amount)]

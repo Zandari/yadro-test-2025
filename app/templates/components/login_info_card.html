@@ -1,0 +1,19 @@
+<div class="card mb-4">
+    <div class="card-header">Login information</div>
+    <div class="card-body">
+        <p><strong>Login:</strong> <span data-field-id="user-login-username">{{ user.login.username }}</span></p>
+        <p><strong>Password:</strong> <span data-field-id="user-login-password">{{ user.login.password }}</span></p>
+        <div class="row">
+            <div class="col-md-4">
+                <p class="mb-1"><strong>UUID:</strong></p>
+                <small class="text-muted"><span data-field-id="user-login-uuid">{{ user.login.uuid }}</span></small>
+            </div>
+            <div class="col-md-8">
+                <p class="mb-1"><strong>Hashes:</strong></p>
+                <small class="text-muted d-block"><span data-field-id="user-login-md5">{{ user.login.md5 }}</span></small>
+                <small class="text-muted d-block"><span data-field-id="user-login-sha1">{{ user.login.sha1 }}</span></small>
+                <small class="text-muted d-block"><span data-field-id="user-login-sha256">{{ user.login.sha256 }}</span></small>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="card">
+    <div class="col-md-4 text-center">
+        <img src="{{ user.picture.large }}" alt="user picture" class="img-fluid mb-3" data-field-id="user-picture">
+    </div>
+    <div class="col-md-8">
+        <h3 class="mb-3">
+            <span data-field-id="user-name-title">{{ user.name.title }}</span>
+            <span data-field-id="user-name-first">{{ user.name.first }}</span>
+            <span data-field-id="user-name-last">{{ user.name.last }}</span>
+        </h3>
+        <p class="lead"><span data-field-id="user-gender">{{ user.gender }}</span></p>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="card mb-4">
+    <div class="card-header">Address</div>
+    <div class="card-body">
+        <p>
+            <span data-field-id="user-street-number">{{ user.location.street_number }}</span>
+            <span data-field-id="user-street-name">{{ user.location.street_name }}</span>
+        </p>
+        <p>
+            <span data-field-id="user-city">{{ user.location.city }}</span>,
+            <span data-field-id="user-state">{{ user.location.state }}</span>
+        </p>
+        <p>
+            <span data-field-id="user-country">{{ user.location.country }}</span>
+            <span data-field-id="user-postcode">{{ user.location.postcode }}</span>
+        </p>
+
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <p class="mb-1"><strong>Coordinates:</strong></p>
+                <p>Latitude: <span data-field-id="user-latitude">{{ user.location.coordinates.latitude }}</span></p>
+                <p>Longitude: <span data-field-id="user-longitude">{{ user.location.coordinates.longitude }}</span></p>
+            </div>
+            <div class="col-md-6">
+                <p class="mb-1"><strong>Timezone:</strong></p>
+                <p>Offset: <span data-field-id="user-timezone-offset">{{ user.location.timezone.offset }}</span></p>
+                <p>Description: <span data-field-id="user-timezone-description">{{ user.location.timezone.description }}</span></p>
+            </div>
+        </div>
+    </div>
+</div>

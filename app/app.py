@@ -31,17 +31,5 @@ def create_app(config_class: typing.Type) -> typing.Generator[None, None, Flask]
 
 def _initialize_database(database: peewee.Database) -> None:
     models.db_proxy.initialize(database)
-    all_models=[
-        models.User,
-        models.PictureModel,
-        models.IdModel,
-        models.RegisteredModel,
-        models.DobModel,
-        models.LoginModel,
-        models.LocationModel,
-        models.TimezoneModel,
-        models.CoordinatesModel,
-        models.NameModel,
-    ]
-    #database.drop_tables(all_models)
-    database.create_tables(all_models)
+    database.drop_tables(models.all_models)
+    database.create_tables(models.all_models)

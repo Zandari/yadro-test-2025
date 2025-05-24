@@ -88,3 +88,17 @@ class User(BaseModel):
     id_info = ForeignKeyField(IdModel, backref='user')
     picture = ForeignKeyField(PictureModel, backref='user')
     nat = CharField()
+
+
+all_models=[
+    User,
+    PictureModel,
+    IdModel,
+    RegisteredModel,
+    DobModel,
+    LoginModel,
+    LocationModel,
+    TimezoneModel,
+    CoordinatesModel,
+    NameModel,
+]
